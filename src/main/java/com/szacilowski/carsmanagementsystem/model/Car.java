@@ -1,12 +1,15 @@
 package com.szacilowski.carsmanagementsystem.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Car {
-    @NonNull private String brand;
-    @NonNull private String model;
-    @NonNull private int year;
+    private String brand;
+    private String model;
+    private int year;
 }

@@ -2,6 +2,8 @@ package com.szacilowski.carsmanagementsystem.controller;
 
 import com.szacilowski.carsmanagementsystem.model.Car;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,5 +21,12 @@ public class CarController {
         carList.add(car1);
         carList.add(car2);
         carList.add(car3);
+    }
+
+    @GetMapping("/car")
+    public String getCar(Model model) {
+        model.addAttribute("cars", carList);
+        model.addAttribute("newCar", new Car());
+        return "car";
     }
 }
