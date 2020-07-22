@@ -17,10 +17,17 @@
 List of features ready and TODOs for future development
 
 To-do list:
-* add car
-* show cars in table
-* remove car
-* edit car info
+* [x] add car
+* [x] get/show cars
+* [ ] add fields: id
+* [ ] get cars in a specific colour
+* [ ] get/show cars in table
+* [ ] remove car
+* [ ] edit car info
+* [ ] adding support for Swagger UI
+* [ ] implement HATEOAS
+
+
 ## Status
 Project is: _in progress_.
 ## Licence
