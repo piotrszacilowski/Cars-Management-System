@@ -11,8 +11,12 @@
         <h1>Car Management System</h1>
     </header>
     <main class="main">
-        <section>
-
+        <section class="getCars">
+            <tr th:each="car: ${cars}">
+                <td th:text="${car.getBrand()}"></td>
+                <td th:text="${car.getModel()}"></td>
+                <td th:text="${car.getYear()}"></td><br>
+            </tr>
         </section>
     </main>
 </body>
