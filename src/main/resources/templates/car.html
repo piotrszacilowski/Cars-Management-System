@@ -39,9 +39,15 @@
         <section class="addCar">
             <h3>Add new car:</h3>
             <form th:action="@{add-car}" th:object="${newCar}" method="post">
-                <p>Brand: <input type="text" th:field="*{brand}"></p>
-                <p>Model: <input type="text" th:field="*{model}"></p>
-                <p>Year:  <input type="text" th:field="*{year}"></p>
+                <p>Brand: <label>
+                    <input type="text" th:field="*{brand}">
+                </label></p>
+                <p>Model: <label>
+                    <input type="text" th:field="*{model}">
+                </label></p>
+                <p>Year: <label>
+                    <input type="text" th:field="*{year}">
+                </label></p>
                 <p><input type="submit" value="Add car"></p>
             </form>
         </section>
