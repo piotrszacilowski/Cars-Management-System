@@ -18,20 +18,20 @@
         <section class="getCars">
             <table class="table">
                 <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Brand</th>
-                    <th scope="col">Model</th>
-                    <th scope="col">Year</th>
-                </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Year</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr th:each="car: ${cars}">
-                    <th scope="row">1</th>
-                    <td th:text="${car.getBrand()}"></td>
-                    <td th:text="${car.getModel()}"></td>
-                    <td th:text="${car.getYear()}"></td><br>
-                </tr>
+                    <tr th:each="car: ${cars}">
+                        <th scope="row">1</th>
+                        <td th:text="${car.getBrand()}"></td>
+                        <td th:text="${car.getModel()}"></td>
+                        <td th:text="${car.getYear()}"></td><br>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -39,16 +39,22 @@
         <section class="addCar">
             <h3>Add new car:</h3>
             <form th:action="@{add-car}" th:object="${newCar}" method="post">
-                <p>Brand: <label>
-                    <input type="text" th:field="*{brand}">
-                </label></p>
-                <p>Model: <label>
-                    <input type="text" th:field="*{model}">
-                </label></p>
-                <p>Year: <label>
-                    <input type="text" th:field="*{year}">
-                </label></p>
-                <p><input type="submit" value="Add car"></p>
+                <div class="form-group">
+                    <label>Brand:</label>
+                    <input type="text" th:field="*{brand}" class="form-control" placeholder="Brand">
+                </div>
+                <div class="form-group">
+                    <label>Model:</label>
+                    <input type="text" th:field="*{model}" class="form-control" placeholder="Model">
+                </div>
+                <div class="form-group">
+                    <label>Year:</label>
+                    <input type="text" th:field="*{year}"class="form-control" placeholder="Year">
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Add car</button>
+                </div>
             </form>
         </section>
     </main>
