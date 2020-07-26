@@ -9,6 +9,7 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 public class Car {
+    private Long id;
     private String brand;
     private String model;
 }
