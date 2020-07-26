@@ -15,9 +15,9 @@ public class CarController {
     private List<Car> carList;
 
     public CarController() {
-        Car car1 = new Car("Renault", "Megane RS",2015);
-        Car car2 = new Car("BMW", "M2 Competition",2019);
-        Car car3 = new Car("Porsche", "911 Turbo S",2016);
+        Car car1 = new Car("Renault", "Megane RS");
+        Car car2 = new Car("BMW", "M2 Competition");
+        Car car3 = new Car("Porsche", "911 Turbo S");
 
         carList = new ArrayList<>();
         carList.add(car1);
