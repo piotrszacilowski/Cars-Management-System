@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CarService implements CarServiceInterface {
@@ -36,6 +37,12 @@ public class CarService implements CarServiceInterface {
     public void deleteCar(Long id) {
         carList.stream().filter(car -> car.getId().equals(id)).findFirst().ifPresent(car -> carList.remove(car));
     }
+
+    @Override
+    public Optional<Car> getCarById(Long id) {
+        return carList.stream().filter(car -> car.getId().equals(id)).findFirst();
+    }
+
 
     @Override
     public void updateCar(Car car) {

@@ -5,11 +5,13 @@ import com.szacilowski.carsmanagementsystem.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class CarController {
@@ -33,5 +35,14 @@ public class CarController {
     public String addCar(@ModelAttribute Car car) {
         carService.addCar(car);
         return "redirect:/cars";
+    }
+
+    @DeleteMapping("/cars/delete/{id}")
+    public String deleteCar(Long id) {
+        Optional<Car> carToRemove = carService.getCarById(id);
+        if (carToRemove.isPresent()) {
+            carService.deleteCar(id);
+        }
+        return "redirect:/cars"
     }
 }
