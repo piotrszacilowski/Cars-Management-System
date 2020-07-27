@@ -34,7 +34,7 @@ public class CarService implements CarServiceInterface {
 
     @Override
     public void deleteCar(Long id) {
-        
+        carList.stream().filter(car -> car.getId().equals(id)).findFirst().ifPresent(car -> carList.remove(car));
     }
 
     @Override
