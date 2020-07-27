@@ -12,17 +12,9 @@ import java.util.List;
 
 @Controller
 public class CarController {
-    private List<Car> carList;
 
     public CarController() {
-        Car car1 = new Car("Renault", "Megane RS");
-        Car car2 = new Car("BMW", "M2 Competition");
-        Car car3 = new Car("Porsche", "911 Turbo S");
 
-        carList = new ArrayList<>();
-        carList.add(car1);
-        carList.add(car2);
-        carList.add(car3);
     }
 
     @GetMapping("/car")
