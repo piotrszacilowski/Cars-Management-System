@@ -1,20 +1,22 @@
 package com.szacilowski.carsmanagementsystem.controller;
 
 import com.szacilowski.carsmanagementsystem.model.Car;
+import com.szacilowski.carsmanagementsystem.service.CarService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Controller
 public class CarController {
 
-    public CarController() {
+    CarService carService;
 
+    @Autowired
+    public CarController(CarService carService) {
+        this.carService = carService;
     }
 
     @GetMapping("/car")
