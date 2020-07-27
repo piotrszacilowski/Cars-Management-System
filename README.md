@@ -19,7 +19,7 @@ List of features ready and TODOs for future development
 To-do list:
 * [x] add car
 * [x] get/show cars
-* [ ] add fields: id
+* [x] add fields: id
 * [ ] get cars in a specific colour
 * [ ] get/show cars in table
 * [ ] remove car
