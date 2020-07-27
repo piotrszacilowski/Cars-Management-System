@@ -43,6 +43,6 @@ public class CarController {
         if (carToRemove.isPresent()) {
             carService.deleteCar(id);
         }
-        return "redirect:/cars"
+        return "redirect:/cars";
     }
 }
