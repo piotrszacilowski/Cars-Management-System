@@ -26,7 +26,7 @@
                 </thead>
                 <tbody>
                     <tr th:each="car: ${cars}">
-                        <th scope="row">1</th>
+                        <th th:text="${car.getId()}"></th>
                         <td th:text="${car.getBrand()}"></td>
                         <td th:text="${car.getModel()}"></td>
                     </tr>

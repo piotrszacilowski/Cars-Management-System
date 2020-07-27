@@ -28,7 +28,7 @@ public class CarService implements CarServiceInterface {
     }
 
     @Override
-    public List<Car> getCar() {
+    public List<Car> getCars() {
         return carList;
     }
 }

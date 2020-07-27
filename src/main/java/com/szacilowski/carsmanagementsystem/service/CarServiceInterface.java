@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CarServiceInterface {
     boolean addCar(Car car);
-    List<Car> getCar();
+    List<Car> getCars();
 }

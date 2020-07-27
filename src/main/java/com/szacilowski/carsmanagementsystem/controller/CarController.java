@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class CarController {
 
@@ -19,16 +21,17 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping("/car")
-    public String getCar(Model model) {
-        model.addAttribute("cars", carList);
+    @GetMapping("/cars")
+    public String getCars(Model model) {
+        List<Car> carsList = carService.getCars();
+        model.addAttribute("cars", carsList);
         model.addAttribute("newCar", new Car());
         return "car";
     }
 
-    @PostMapping("/add-car")
-    public String addCar(@ModelAttribute Car car) {
-        carList.add(car);
-        return "redirect:/car";
-    }
+//    @PostMapping("/add-car")
+//    public String addCar(@ModelAttribute Car car) {
+//        carsList.add(car);
+//        return "redirect:/car";
+//    }
 }
