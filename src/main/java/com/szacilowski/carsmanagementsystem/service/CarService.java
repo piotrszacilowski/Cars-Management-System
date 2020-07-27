@@ -31,4 +31,14 @@ public class CarService implements CarServiceInterface {
     public List<Car> getCars() {
         return carList;
     }
+
+    @Override
+    public void deleteCar(Long id) {
+        
+    }
+
+    @Override
+    public void updateCar(Car car) {
+
+    }
 }
