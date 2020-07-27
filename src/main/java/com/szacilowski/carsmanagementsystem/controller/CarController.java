@@ -29,9 +29,9 @@ public class CarController {
         return "car";
     }
 
-//    @PostMapping("/add-car")
-//    public String addCar(@ModelAttribute Car car) {
-//        carsList.add(car);
-//        return "redirect:/car";
-//    }
+    @PostMapping("/add-car")
+    public String addCar(@ModelAttribute Car car) {
+        carService.addCar(car);
+        return "redirect:/cars";
+    }
 }
