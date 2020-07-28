@@ -24,7 +24,7 @@ To-do list:
 * [ ] get/show cars in table
 * [ ] remove car
 * [ ] edit car info
-* [ ] adding support for Swagger UI
+* [x] adding support for Swagger UI
 * [ ] implement HATEOAS
 
 
