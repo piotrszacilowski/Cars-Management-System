@@ -12,7 +12,8 @@
 - Spring Boot,
 - Thymeleaf,
 - Bootstrap 4,
-- Lombok
+- Lombok,
+- Swagger UI
 ## Features
 List of features ready and TODOs for future development
 
