@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
 public class Car {
