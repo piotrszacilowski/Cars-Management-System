@@ -2,10 +2,7 @@ package com.szacilowski.carsmanagementsystem.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -14,6 +11,7 @@ import javax.persistence.Id;
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
+@Table(name = "cars")
 public class Car {
 
     @Id
