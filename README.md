@@ -12,7 +12,8 @@
 - Spring Boot,
 - Thymeleaf,
 - Bootstrap 4,
-- Lombok,
+- MySQL as a database,
+- Lombok for generating boilerplate code,
 - Swagger UI
 ## Features
 List of features ready and TODOs for future development
