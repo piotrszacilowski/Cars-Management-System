@@ -1,5 +1,6 @@
-package com.szacilowski.carsmanagementsystem.model;
+package com.szacilowski.carsmanagementsystem.repository;
 
+import com.szacilowski.carsmanagementsystem.model.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

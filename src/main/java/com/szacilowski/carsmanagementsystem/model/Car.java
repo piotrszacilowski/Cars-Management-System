@@ -8,10 +8,10 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Table(name = "cars")
 public class Car {
 
     @Id

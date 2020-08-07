@@ -1,6 +1,7 @@
 package com.szacilowski.carsmanagementsystem.service;
 
 import com.szacilowski.carsmanagementsystem.model.Car;
+import com.szacilowski.carsmanagementsystem.repository.CarRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,10 +13,10 @@ public class CarService implements CarServiceInterface {
 
     private List<Car> carList;
 
-    CarService() {
-        Car car1 = new Car(1L,"Renault", "Megane RS");
-        Car car2 = new Car(2L,"BMW", "M2 Competition");
-        Car car3 = new Car(3L,"Porsche", "911 Turbo S");
+    CarService(CarRepo carRepo) {
+        Car car1 = new Car("Renault", "Megane RS");
+        Car car2 = new Car("BMW", "M2 Competition");
+        Car car3 = new Car("Porsche", "911 Turbo S");
 
         carList = new ArrayList<>();
         carList.add(car1);
